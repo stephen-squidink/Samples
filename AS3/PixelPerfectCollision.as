@@ -30,5 +30,4 @@ if(this.bounds.intersects(obj.bounds))
 /**
  * To save performance we don’t always need to do the pixel check, we first check if the object collides with the objects rectangle bound first
  * then we can check the pixel hit test between them 2 objects.
-
  */
