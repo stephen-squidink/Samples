@@ -12,12 +12,10 @@ UIAccelerometer *accelerometer = [UIAccelerometer sharedAccelerometer];
 accelerometer.updateInterval = 1.0/30.0;
 accelerometer.delegate = self;
 
-
 - (void) accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
   [currentScene accelerometer:[SPPoint pointWithX:acceleration.x y:acceleration.y]];
 }
-
 
 - (void) accelerometer:(SPPoint *)acceleration
 {
