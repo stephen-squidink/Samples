@@ -50,7 +50,9 @@ private function sliceBitmap():void
 				tile.addEventListener(MouseEvent.CLICK, onTileClick);
 							
 				var bmp : Bitmap = new Bitmap(new BitmapData(Number(_tileWidth), Number(_tileHeight ), false)); 
-				bmp.bitmapData.copyPixels( bitmapData, new Rectangle(column * _tileWidth, row * _tileHeight,  _tileWidth, _tileHeight), new Point(0,0));
+				bmp.bitmapData.copyPixels( bitmapData, 
+							   new Rectangle(column * _tileWidth, row * _tileHeight,  _tileWidth, _tileHeight), 
+							   new Point(0,0));
 							
 				tile.addChild(bmp);
 							
