@@ -60,7 +60,7 @@ private function sliceBitmap():void
       }
       else
       {
-       _tiles.push({index: count, space:true});
+        _tiles.push({index: count, space:true});
       }
 						
       count++
@@ -74,20 +74,20 @@ private function sliceBitmap():void
 
 private function randomArraySort(_array:Array) : Array 
 {
-	var _length:Number = _array.length;
-	var mixed:Array = _array.slice();
-	var rn:Number;
-	var el:Object;
+  var _length:Number = _array.length;
+  var mixed:Array = _array.slice();
+  var rn:Number;
+  var el:Object;
 			
-	for (var i : Number = 0; i < _length; i++) 
-	{
-		el = mixed[i];
-		rn = Math.floor(Math.random() * _length);
-		mixed[i] = mixed[rn];
-		mixed[rn] = el;
-	}
+  for (var i : Number = 0; i < _length; i++) 
+  {
+    el = mixed[i];
+    rn = Math.floor(Math.random() * _length);
+    mixed[i] = mixed[rn];
+    mixed[rn] = el;
+  }
 			
-	return mixed;
+  return mixed;
 }
 
 /**
@@ -98,43 +98,43 @@ private function randomArraySort(_array:Array) : Array
 
 private function checkDirection(obj : Object, index : int):String
 {
-	if(obj.tile.x - obj.tile.width + 0.5 > -0.5)
-	{
-		if(index - 1 >= 0)
-		{
-			if(_shuffledTiles[index - 1].space)
-				return LEFT;
-		}
-	}
+  if(obj.tile.x - obj.tile.width + 0.5 > -0.5)
+  {
+    if(index - 1 >= 0)
+    {
+      if(_shuffledTiles[index - 1].space)
+        return LEFT;
+    }
+  }
 			
-	if((obj.tile.x + obj.tile.width - 0.5) + (_tileWidth + 0.5) < this.width + 0.5)
-	{
-		if(index + 1 < _shuffledTiles.length)
-		{
-			if(_shuffledTiles[index + 1].space)
-				return RIGHT;
-		}
-	}
+  if((obj.tile.x + obj.tile.width - 0.5) + (_tileWidth + 0.5) < this.width + 0.5)
+  {
+    if(index + 1 < _shuffledTiles.length)
+    {
+      if(_shuffledTiles[index + 1].space)
+        return RIGHT;
+    }
+  }
 			
-	if(obj.tile.y - obj.tile.height + 0.5 > -0.5)
-	{
-		if(index - _rowCount >= 0)
-		{
-			if(_shuffledTiles[index - _rowCount].space)
-				return UP;
-		}		
-	}
+  if(obj.tile.y - obj.tile.height + 0.5 > -0.5)
+  {
+    if(index - _rowCount >= 0)
+    {
+      if(_shuffledTiles[index - _rowCount].space)
+        return UP;
+    }		
+  }
 			
-	if((obj.tile.y + obj.tile.height - 0.5) + (_tileHeight + 0.5) < this.height + 0.5)
-	{
-		if(index + _rowCount < _shuffledTiles.length)
-		{
-			if(_shuffledTiles[index + _rowCount].space)
-				return DOWN;
-		}
-	}
+  if((obj.tile.y + obj.tile.height - 0.5) + (_tileHeight + 0.5) < this.height + 0.5)
+  {
+    if(index + _rowCount < _shuffledTiles.length)
+    {
+      if(_shuffledTiles[index + _rowCount].space)
+        return DOWN;
+    }
+  }
 			
-	return NULL;
+  return NULL;
 }
 
 /**
@@ -142,7 +142,7 @@ private function checkDirection(obj : Object, index : int):String
  */
 
 case UP:
-	Tweener.addTween(piece.tile,{y: piece.tile.y - _tileHeight, time:0.25, onComplete:onPieceMoved});
+  Tweener.addTween(piece.tile,{y: piece.tile.y - _tileHeight, time:0.25, onComplete:onPieceMoved});
 
 /**
  * I then finally check if the shuffle has completed or not, by ensuring the indexes stored in the array are in the correct order.
@@ -150,13 +150,13 @@ case UP:
 				
 private function checkCompletion():Boolean
 {
-	for(var i : int = 0; i < _shuffledTiles.length;i++)
-	{
-		if(_shuffledTiles[i].index != i)
-			return false
-	}
+  for(var i : int = 0; i < _shuffledTiles.length;i++)
+  {
+    if(_shuffledTiles[i].index != i)
+      return false
+  }
 					
-	return true;
+  return true;
 }
 				
 /** 
