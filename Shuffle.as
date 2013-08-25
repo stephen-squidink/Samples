@@ -48,24 +48,24 @@ private function sliceBitmap():void
       {
         var tile : Sprite = new Sprite();
         tile.addEventListener(MouseEvent.CLICK, onTileClick);
-				
-				var bmp : Bitmap = new Bitmap(new BitmapData(Number(_tileWidth), Number(_tileHeight ), false)); 
-				bmp.bitmapData.copyPixels( bitmapData, 
-							   new Rectangle(column * _tileWidth, row * _tileHeight,  _tileWidth, _tileHeight), 
-							   new Point(0,0));
+
+        var bmp : Bitmap = new Bitmap(new BitmapData(Number(_tileWidth), Number(_tileHeight ), false)); 
+        bmp.bitmapData.copyPixels( bitmapData, 
+                 new Rectangle(column * _tileWidth, row * _tileHeight,  _tileWidth, _tileHeight), 
+                 new Point(0,0));
 							
-				tile.addChild(bmp);
-							
-				_tiles.push({index: count, tile: tile});
-			}
-			else
-			{
-				_tiles.push({index: count, space:true});
-			}
+        tile.addChild(bmp);
+
+        _tiles.push({index: count, tile: tile});
+      }
+      else
+      {
+       _tiles.push({index: count, space:true});
+      }
 						
-			count++
-		}
-	}
+      count++
+    }
+  }
 }
 
 /**
