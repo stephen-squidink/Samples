@@ -44,11 +44,11 @@ private function sliceBitmap():void
   {
     for(var column : int = 0; column < _columnCount; column++)
     {
-			if(_tiles.length < (_columnCount * _rowCount) - 1)
-			{
-				var tile : Sprite = new Sprite();
-				tile.addEventListener(MouseEvent.CLICK, onTileClick);
-							
+      if(_tiles.length < (_columnCount * _rowCount) - 1)
+      {
+        var tile : Sprite = new Sprite();
+        tile.addEventListener(MouseEvent.CLICK, onTileClick);
+				
 				var bmp : Bitmap = new Bitmap(new BitmapData(Number(_tileWidth), Number(_tileHeight ), false)); 
 				bmp.bitmapData.copyPixels( bitmapData, 
 							   new Rectangle(column * _tileWidth, row * _tileHeight,  _tileWidth, _tileHeight), 
