@@ -7,7 +7,7 @@
 
 if (_buttons[1].key) 
 {
-	_player.rotation -= deg2rad(_rotationSpeed);
+  _player.rotation -= deg2rad(_rotationSpeed);
 }
 
 if (_buttons[2].key) 
