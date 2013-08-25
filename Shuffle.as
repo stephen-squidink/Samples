@@ -38,12 +38,12 @@ public function ShuffleBitmap(	bitmapData:BitmapData=null, pixelSnapping:String=
 
 private function sliceBitmap():void
 {
-	var count : int = 0;
+  var count : int = 0;
 				
-	for (var row : int = 0; row < _rowCount; row++)
-	{
-		for(var column : int = 0; column < _columnCount; column++)
-		{
+  for (var row : int = 0; row < _rowCount; row++)
+  {
+    for(var column : int = 0; column < _columnCount; column++)
+    {
 			if(_tiles.length < (_columnCount * _rowCount) - 1)
 			{
 				var tile : Sprite = new Sprite();
