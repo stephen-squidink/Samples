@@ -3,9 +3,9 @@
  * 
  * Introduction
  * 
- * One of the projects we developed was a Shuffle Puzzle game using the CandiTV Platform (http://live.canditv.com/shuffle/audi.html). The game was built 
- * using Flash CS4 and used a lot of the timeline system in the IDE. As an experiment I decided to try and develop a shuffle puzzle game for the BlackBerry 
- * Playbook. 
+ * One of the projects we developed was a Shuffle Puzzle game using the CandiTV Platform (http://live.canditv.com/shuffle/audi.html). 
+ * The game was built using Flash CS4 and used a lot of the timeline system in the IDE. As an experiment I decided to try and develop 
+ * a shuffle puzzle game for the BlackBerry Playbook. 
  * 
  * I decided that I wasn’t going to use the QNX Framework or the Flex Framework and build it with pure AS3. This gives me the opportunity to port it for iOS, 
  * Android, Desktop and Web Browsers very easily from the BlackBerry Playbook, so there isn’t any dependant libraries needed for specific OS’s and there can be 
