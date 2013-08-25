@@ -20,21 +20,21 @@ Starling.juggler.tween(_readyImage, 0.1, {alpha:1, transition: Transitions.EASE_
   onComplete:function():void
   {
     Starling.juggler.delayCall(function():void
-	{
+    {
       AssetEmbeds_2x.ASSETS.playSound("fight", 0,0, new SoundTransform(5));
 			
       Starling.juggler.tween(_readyImage, 0.1, {alpha:0, transition: Transitions.EASE_OUT, scaleX: 2, scaleY: 2});
       Starling.juggler.tween(_fightImage, 0.1, {alpha:1, transition: Transitions.EASE_OUT, scaleX: 1, scaleY: 1, 
-	    onComplete:function():void
+        onComplete:function():void
         {			
           Starling.juggler.delayCall(function():void
-		  {
+	  {
             Starling.juggler.tween(_fightImage, 0.1, {alpha:0, transition: Transitions.EASE_OUT, scaleX: 2, scaleY: 2});
           
-		    _gameState = GameStates.FIGHT;
-		  }, 0.75);
+	    _gameState = GameStates.FIGHT;
+          }, 0.75);
         }
-	  });
+      });
     }, 0.75);
   }
 });
