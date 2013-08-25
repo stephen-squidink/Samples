@@ -20,9 +20,9 @@
  * I decided to use the Bitmap as its base class for a few reasons:
  * 
  *  - this allowed easy porting to different IDE’s
- * 	- can easily be used between different type of Flash applications
- * 	- can easily add to the Flash Stage and DisplayList
- * 	- can also take image data and store it in the bitmap, which can then be sliced into different pieces and rendered into the DisplayList
+ *  - can easily be used between different type of Flash applications
+ *  - can easily add to the Flash Stage and DisplayList
+ *  - can also take image data and store it in the bitmap, which can then be sliced into different pieces and rendered into the DisplayList
 */
 
 public function ShuffleBitmap(	bitmapData:BitmapData=null, pixelSnapping:String="auto", smoothing:Boolean=false)
